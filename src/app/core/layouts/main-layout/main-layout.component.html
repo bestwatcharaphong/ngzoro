@@ -1,0 +1,29 @@
+<nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li
+        nz-menu-item
+        routerLink="/importer"
+        routerLinkActive="ant-menu-item-selected"
+      >
+        Upload
+      </li>
+      <li
+        nz-menu-item
+        routerLink="/history"
+        routerLinkActive="ant-menu-item-selected"
+      >
+        History
+      </li>
+
+      <li nz-menu-item style="display: flex; float: right;" (click)="logout()">
+        Logout
+      </li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <router-outlet></router-outlet>
+  </nz-content>
+  <nz-footer>INET Customer Satisfaction ©2020 Implement By INET-SQA</nz-footer>
+</nz-layout>

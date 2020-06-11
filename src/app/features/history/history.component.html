@@ -1,0 +1,20 @@
+<div class="inner-content">
+  <nz-table #historyTable [nzData]="historyData">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>File</th>
+        <th>Record</th>
+        <th>Importer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of historyTable.data">
+        <td>{{ data.created_at | date }}</td>
+        <td>{{ data.file_name }}</td>
+        <td>{{ data.record }}</td>
+        <td>{{ data.user.username }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
